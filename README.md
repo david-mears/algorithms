@@ -28,3 +28,12 @@ E.g.:
 >>> stopwatch.measure(lambda: shuffle(list))
 1.1905910469067749e-05
 ```
+
+Also try:
+
+list.sort()
+list[-1]
+list.reverse()
+
+Using matplotlib:
+https://chartio.com/resources/tutorials/how-to-save-a-plot-to-a-file-using-matplotlib/
