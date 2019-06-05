@@ -1,6 +1,6 @@
 import unittest
 import time
-from timer import timer
+from algorithms import timer
 
 class NewTest(unittest.TestCase):
 
@@ -29,7 +29,5 @@ class NewTest(unittest.TestCase):
         self.assertTrue(duration > 1)
         self.assertTrue(duration < 2)
     
-    
-
 if __name__ == '__main__':
     unittest.main()

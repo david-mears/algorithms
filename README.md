@@ -3,15 +3,19 @@ https://github.com/makersacademy/course/blob/master/algorithmic_complexity/READM
 
 Using matplotlib python library to display data.
 
+## Before running
+
+Make sure you have installed requirements in e.g. a virtual environment and activated it.
+
 Testing with unittest:
 ```
 python tests.py
 ```
 
-A module called 'timer' is included for timing functions. Usage:
+`timer.py` is included for timing functions. Usage:
 
 ```
-from timer import timer
+from algorithms import timer
 stopwatch = timer.Stopwatch()
 stopwatch.measure(lambda: your_function(arguments))
 ```
