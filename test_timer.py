@@ -2,7 +2,7 @@ import unittest
 import time
 from algorithms import timer
 
-class NewTest(unittest.TestCase):
+class TimerTest(unittest.TestCase):
 
     def setUp(self):
         self.stopwatch = timer.Stopwatch()
