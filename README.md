@@ -41,3 +41,11 @@ list.reverse()
 
 Using matplotlib:
 https://chartio.com/resources/tutorials/how-to-save-a-plot-to-a-file-using-matplotlib/
+
+# Goals for project
+
+Become conversant in algorithmic complexity; be able to use this knowledge to write efficient code.
+
+Host the algorithmic timer and graph-plotter on a website (possibly just for local hosting due to security issues with running strangers' code)
+
+Stretch goal: apply supervised machine learning of to the timing output so that the app can suggest the likely curve of the graph (with % confidence)
