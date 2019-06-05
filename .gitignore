@@ -1,3 +1,8 @@
 venv/
 .vscode
-__pycache__
+
+plots/**
+!plots/example.png
+
+**/__pycache__
+*.pyc

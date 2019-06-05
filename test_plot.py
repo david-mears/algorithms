@@ -11,7 +11,7 @@ class PlotTest(unittest.TestCase):
         file_location = self.plotter.plot(
             x_label='n', x_data=[0, 1, 2], y_label='time', y_data=[0, 1, 2]
             )
-        self.assertTrue(os.path.exists(file_location))        
+        self.assertTrue(os.path.exists(file_location))
 
 if __name__ == '__main__':
     unittest.main()

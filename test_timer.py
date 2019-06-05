@@ -28,6 +28,6 @@ class TimerTest(unittest.TestCase):
 
         self.assertTrue(duration > 1)
         self.assertTrue(duration < 2)
-    
+
 if __name__ == '__main__':
     unittest.main()

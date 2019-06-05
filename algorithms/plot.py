@@ -6,10 +6,17 @@ import matplotlib.pyplot as plt
 
 class Plotter:
     
-    def plot(self, x_label, x_data, y_label, y_data):
-        plt.plot([3, 4], [3, 4])
-        plt.xlabel('number of eggs eaten')
-        plt.ylabel('stars in the sky')
+    # data as arrays
+    # labels as strings
+    def plot(self,
+            x_data,
+            y_data,
+            x_label='N',
+            y_label='time',
+            ):
+        plt.plot(x_data, y_data)
+        plt.xlabel(x_label)
+        plt.ylabel(y_label)
         file_name = ('%s.png' % str(datetime.now().timestamp()))
         file_path = os.path.join(os.getcwd(), 'plots', file_name)
         plt.savefig(file_path)
