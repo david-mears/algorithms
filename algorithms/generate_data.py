@@ -1,4 +1,5 @@
 from algorithms import timer
+from random import shuffle
 
 class DataGenerator():
     INCREMENT = 500
@@ -10,9 +11,28 @@ class DataGenerator():
         increment=INCREMENT,
         maximum=MAXIMUM,
         ):
-        pass
 
-    def __get_n_values(self, increment, maximum):
+        n_values = self.get_n_values(increment, maximum)
+        datasets = []
+        for n in n_values:
+            _list = list(range(1, n+1))
+            shuffle(_list)
+            datasets.append(_list)
+        
+        times = []
+
+        # Run the function once to get past the initial anomalies
+        function(datasets[0])
+
+        for dataset in datasets:
+            time = timer.Stopwatch().measure(
+                lambda: function(dataset)
+            )
+            times.append(time)
+        results = (n_values, times)
+        return results
+
+    def get_n_values(self, increment, maximum):
         n_values = []
         while increment <= maximum:
             n_values.append(maximum)

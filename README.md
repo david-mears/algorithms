@@ -1,7 +1,8 @@
-Following Makers' workshop on Algorithmic Complexity
+
+For Makers' workshop on Algorithmic Complexity
 https://github.com/makersacademy/course/blob/master/algorithmic_complexity/README.md
 
-Using matplotlib python library to display data.
+Using matplotlib python library to display how algorithms perform with different N (so that you can see what kind of Big-O notation might be at play).
 
 ## Before running
 
@@ -9,38 +10,22 @@ Make sure you have installed requirements in e.g. a virtual environment and acti
 
 Testing with unittest:
 ```
-python tests.py
+python -m unittest discover -s <directory>
 ```
-
-`timer.py` is included for timing functions. Usage:
-
-```
-from algorithms import timer
-stopwatch = timer.Stopwatch()
-stopwatch.measure(lambda: your_function(arguments))
-```
-
-E.g.:
-
-```
->>> from random import shuffle
->>> from timer import timer
->>> list = []
->>> for i in range(1000):
-...     list.append(i)
->>> stopwatch = timer.Stopwatch()
->>> stopwatch.measure(lambda: shuffle(list))
-1.1905910469067749e-05
-```
-
-Also try:
-
-list.sort()
-list[-1]
-list.reverse()
 
 Using matplotlib:
 https://chartio.com/resources/tutorials/how-to-save-a-plot-to-a-file-using-matplotlib/
+
+## Using
+
+>>> from algorithms import generate_data, plot
+>>> dg = generate_data.DataGenerator()
+>>> x_data, y_data = dg.time_with_various_n(
+...     function=lambda list: list.sort()
+... )
+>>> pl = plot.Plotter()
+>>> pl.plot(x_data, y_data)
+'C:\\Users\\David\\Desktop\\projects\\algorithms\\plots\\1560338967.574717.png'
 
 # Goals for project
 
