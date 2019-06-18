@@ -27,6 +27,15 @@ https://chartio.com/resources/tutorials/how-to-save-a-plot-to-a-file-using-matpl
 >>> pl.plot(x_data, y_data)
 'C:\\Users\\David\\Desktop\\projects\\algorithms\\plots\\1560338967.574717.png'
 
+Timing your own functions:
+>>> def bubble_sort(list):
+...     n = len(list)
+...     for i in range(n):
+...             for j in range(0, n-i-1):
+...                     if list[j] > list[j+1]:
+...                             list[j], list[j+1] = list[j+1], list[j]
+>>> 
+
 # Goals for project
 
 Become conversant in algorithmic complexity; be able to use this knowledge to write efficient code.
